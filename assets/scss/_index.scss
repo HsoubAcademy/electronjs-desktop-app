@@ -1,0 +1,195 @@
+/*تنسيقات الصفحة الرئيسية*/
+
+.main-container {
+    width: 100%;
+    position: relative;
+    direction: rtl;
+    padding: 15px;
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .main-container__nav {
+        background-color: $main-color;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            color: white;
+            margin: 0;
+            font-size: 22px;
+            font-family: "Noto Kufi Arabic Bold", sans-serif;
+        }
+    }
+}
+
+.todo {
+    position: relative;
+    float: right;
+    margin-top: 30px;
+    & > div {
+        & > div {
+            box-shadow: 0px 2px 4px #d4d4d4;
+            h2 {
+                margin: 0;
+                padding: 10px;
+                font-size: 20px;
+                width: 100%;
+                text-align: center;
+                background-color: $secondary-color;
+                color: $black-color;
+                font-family: "Noto Kufi Arabic", sans-serif;
+            }
+            ul {
+                height: 400px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                padding: 15px;
+                position: relative;
+                .empty-list {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: auto;
+                    height: max-content;
+                    text-align: center;
+                    font-family: "Noto Kufi Arabic", sans-serif;
+                }
+                li {
+                    position: relative;
+                    margin-bottom: 10px;
+                    input {
+                        width: 100%;
+                        border-radius: 0;
+                        border: 1px solid $secondary-color;
+                        font-size: 16px;
+                        padding: 8px 10px;
+                        font-family: inherit;
+                    }
+                    .time-holder {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding-top: 10px;
+                        span {
+                            color: $main-color;
+                            font-family: "Noto Kufi Arabic", sans-serif;
+                        }
+                    }
+                    .buttons-holder {
+                        display: flex;
+                        justify-content: center;
+                        padding: 10px 0;
+                        button {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row-reverse;
+                            padding: 0 14px;
+                            font-size: 16px;
+                            border: none;
+                            color: white;
+                            i {
+                                margin-left: 5px;
+                            }
+                        }
+                        button:not(:last-child) {
+                            margin-right: 10px;
+                        }
+
+                        & > :first-child {
+                            order: 3;
+                            background-color: $red-color;
+                        }
+
+                        & > :nth-child(2) {
+                            order: 2;
+                            background-color: $green-color;
+                        }
+
+                        & > :last-child {
+                            order: 1;
+                            background-color: $main-color;
+                        }
+                    }
+                }
+                li:not(:last-child) {
+                    border-bottom: 1px solid $secondary-color;
+                }
+            }
+            .todo-bottom {
+                display: flex;
+                justify-content: center;
+                padding: 15px;
+                background-color: $secondary-color;
+                & > button {
+                    font-size: 16px;
+                    border: none;
+                    padding: 5px 14px;
+                    display: flex;
+                    align-items: center;
+                    i {
+                        margin-left: 5px;
+                    }
+                }
+                .clear-all {
+                    display: none;
+                    order: 1;
+                    background-color: $red-color;
+                    color: white;
+                    margin-right: 10px;
+                }
+
+                .add-new-task {
+                    background-color: $blue-color;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.todo.todo--normal {
+    width: 50%;
+    & > div {
+        padding-left: 20px;
+    }
+}
+
+.todo.todo--timed {
+    width: 50%;
+    & > div {
+        padding-right: 20px;
+    }
+}
+
+.todo.todo--images {
+    width: 100%;
+    & > div {
+        & > div {
+            .todo--images__list {
+                li:not(.empty-list) {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row-reverse;
+                    & > div:first-child {
+                        width: 60%;
+                    }
+                    & > div:last-child {
+                        width: 40%;
+                        img {
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.clear-all--show {
+    display: flex !important;
+}

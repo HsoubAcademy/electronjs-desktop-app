@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <title>تطبيق إدارة المهام</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+</head>
+
+<body>
+    <!--العنصر الحاوى لكل عناصر التطبيق-->
+    <div class="main-container">
+        <!--العنصر الحاوى على عنوان التطبيق-->
+        <div class="main-container__nav">
+            <h1>تطبيق إدارة المهام</h1>
+        </div>
+
+        <section class="todo todo--normal">
+            <div>
+                <div>
+                    <h2>قائمة المهام النصية</h2>
+                    <ul class="todo--normal__list">
+
+                    </ul>
+                    <div class="todo-bottom">
+                        <button class="clear-all">
+                            <i class='fas fa-trash-alt'></i>
+                            حذف الجميع
+                        </button>
+                        <button class="add-new-task">
+                            <i class="fas fa-plus"></i>
+                            إضافة مهمة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="todo todo--timed">
+            <div>
+                <div>
+                    <h2>قائمة المهام المؤقتة</h2>
+                    <ul class="todo--timed__list">
+
+                    </ul>
+                    <div class="todo-bottom">
+                        <button class="clear-all">
+                            <i class='fas fa-trash-alt'></i>
+                            حذف الجميع
+                        </button>
+                        <button class="add-new-task">
+                            <i class="fas fa-plus"></i>
+                            إضافة مهمة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="todo todo--images">
+            <div>
+                <div>
+                    <h2>قائمة المهام ذات الصور</h2>
+                    <ul class="todo--images__list">
+
+                    </ul>
+                    <div class="todo-bottom">
+                        <button class="clear-all">
+                            <i class='fas fa-trash-alt'></i>
+                            حذف الجميع
+                        </button>
+                        <button class="add-new-task">
+                            <i class="fas fa-plus"></i>
+                            إضافة مهمة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        require('./assets/js/index.js');
+    </script>
+</body>
+
+</html>

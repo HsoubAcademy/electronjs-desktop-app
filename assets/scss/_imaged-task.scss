@@ -1,0 +1,64 @@
+/*تنسيقات صفحة إضافة مهمة ذات صورة*/
+
+.imaged-form {
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    height: 100vh;
+    & > div {
+        display: flex;
+        flex-direction: column;
+        label {
+            font-family: "Noto Kufi Arabic Bold", sans-serif;
+            margin-bottom: 15px;
+            font-size: 20px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            border-radius: 0;
+            border: 1px solid $secondary-color;
+            font-size: 16px;
+            padding: 8px 10px;
+            font-family: inherit;
+        }
+    }
+    
+    .img-upload {
+        margin-top: 10px;
+        font-size: 16px;
+        border: none;
+        padding: 5px 14px;
+        background-color: $main-color;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+            margin-left: 5px;
+        }
+    }
+
+    .url-image{
+        margin-top: 15px;
+    }
+
+    & > button {
+        margin-top: 10px;
+        font-size: 16px;
+        font-size: 16px;
+        border: none;
+        padding: 5px 14px;
+        background-color: $blue-color;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+            margin-left: 5px;
+            color: white;
+        }
+    }
+}

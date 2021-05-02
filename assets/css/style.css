@@ -1,0 +1,434 @@
+@charset "UTF-8";
+/*التنسيقات العامة للتطبيق*/
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: "Noto Naskh Arabic", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  list-style: none;
+}
+
+button {
+  outline: none;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  cursor: text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Noto Naskh Arabic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/NotoNaskhArabic-Regular.eot"), url("../fonts/NotoNaskhArabic-Regular.woff2") format("woff2"), url("../fonts/NotoNaskhArabic-Regular.woff") format("woff"), url("../fonts/NotoNaskhArabic-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Naskh Arabic Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/NotoNaskhArabic-Bold.eot"), url("../fonts/NotoNaskhArabic-Bold.woff2") format("woff2"), url("../fonts/NotoNaskhArabic-Bold.woff") format("woff"), url("../fonts/NotoNaskhArabic-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Kufi Arabic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/NotoKufiArabic-Regular.eot"), url("../fonts/NotoKufiArabic-Regular.woff2") format("woff2"), url("../fonts/NotoKufiArabic-Regular.woff") format("woff"), url("../fonts/NotoKufiArabic-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Kufi Arabic Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/NotoKufiArabic-Bold.eot"), url("../fonts/NotoKufiArabic-Bold.woff2") format("woff2"), url("../fonts/NotoKufiArabic-Bold.woff") format("woff"), url("../fonts/NotoKufiArabic-Bold.ttf") format("truetype");
+}
+/*الالوان المستخدمة فى التطبيق*/
+/*تنسيقات الصفحة الرئيسية*/
+.main-container {
+  width: 100%;
+  position: relative;
+  direction: rtl;
+  padding: 15px;
+}
+.main-container:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.main-container .main-container__nav {
+  background-color: #454561;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-container .main-container__nav h1 {
+  color: white;
+  margin: 0;
+  font-size: 22px;
+  font-family: "Noto Kufi Arabic Bold", sans-serif;
+}
+
+.todo {
+  position: relative;
+  float: right;
+  margin-top: 30px;
+}
+.todo > div > div {
+  box-shadow: 0px 2px 4px #d4d4d4;
+}
+.todo > div > div h2 {
+  margin: 0;
+  padding: 10px;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: #efefef;
+  color: #000;
+  font-family: "Noto Kufi Arabic", sans-serif;
+}
+.todo > div > div ul {
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 15px;
+  position: relative;
+}
+.todo > div > div ul .empty-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: max-content;
+  text-align: center;
+  font-family: "Noto Kufi Arabic", sans-serif;
+}
+.todo > div > div ul li {
+  position: relative;
+  margin-bottom: 10px;
+}
+.todo > div > div ul li input {
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid #efefef;
+  font-size: 16px;
+  padding: 8px 10px;
+  font-family: inherit;
+}
+.todo > div > div ul li .time-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+.todo > div > div ul li .time-holder span {
+  color: #454561;
+  font-family: "Noto Kufi Arabic", sans-serif;
+}
+.todo > div > div ul li .buttons-holder {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.todo > div > div ul li .buttons-holder button {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 0 14px;
+  font-size: 16px;
+  border: none;
+  color: white;
+}
+.todo > div > div ul li .buttons-holder button i {
+  margin-left: 5px;
+  color: white;
+}
+.todo > div > div ul li .buttons-holder button:not(:last-child) {
+  margin-right: 10px;
+}
+.todo > div > div ul li .buttons-holder > :first-child {
+  order: 3;
+  background-color: #D32929;
+}
+.todo > div > div ul li .buttons-holder > :nth-child(2) {
+  order: 2;
+  background-color: #23AA70;
+}
+.todo > div > div ul li .buttons-holder > :last-child {
+  order: 1;
+  background-color: #454561;
+}
+.todo > div > div ul li:not(:last-child) {
+  border-bottom: 1px solid #efefef;
+}
+.todo > div > div .todo-bottom {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  background-color: #efefef;
+}
+.todo > div > div .todo-bottom > button {
+  font-size: 16px;
+  border: none;
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
+}
+.todo > div > div .todo-bottom > button i {
+  margin-left: 5px;
+}
+.todo > div > div .todo-bottom .clear-all {
+  display: none;
+  order: 1;
+  background-color: #D32929;
+  color: white;
+  margin-right: 10px;
+}
+.todo > div > div .todo-bottom .add-new-task {
+  background-color: #38B9D1;
+  color: white;
+}
+
+.todo.todo--normal {
+  width: 50%;
+}
+.todo.todo--normal > div {
+  padding-left: 20px;
+}
+
+.todo.todo--timed {
+  width: 50%;
+}
+.todo.todo--timed > div {
+  padding-right: 20px;
+}
+
+.todo.todo--images {
+  width: 100%;
+}
+.todo.todo--images > div > div .todo--images__list li:not(.empty-list) {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.todo.todo--images > div > div .todo--images__list li:not(.empty-list) > div:first-child {
+  width: 60%;
+}
+.todo.todo--images > div > div .todo--images__list li:not(.empty-list) > div:last-child {
+  width: 40%;
+}
+.todo.todo--images > div > div .todo--images__list li:not(.empty-list) > div:last-child img {
+  width: 90%;
+}
+
+.clear-all--show {
+  display: flex !important;
+}
+
+/*تنسيقات صفحة اضافة مهمة عادية*/
+.normal-form {
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  height: 100vh;
+}
+.normal-form > div {
+  display: flex;
+  flex-direction: column;
+}
+.normal-form > div label {
+  font-family: "Noto Kufi Arabic Bold", sans-serif;
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+.normal-form > div input {
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid #efefef;
+  font-size: 16px;
+  padding: 8px 10px;
+  font-family: inherit;
+}
+.normal-form > button {
+  margin-top: 10px;
+  font-size: 16px;
+  font-size: 16px;
+  border: none;
+  padding: 5px 14px;
+  background-color: #38B9D1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.normal-form > button i {
+  margin-left: 5px;
+  color: white;
+}
+
+/*تنسيقات صفحة اضافة مهمة مؤقتة*/
+.timed-form {
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  height: 100vh;
+}
+.timed-form > div.not-text {
+  display: flex;
+  flex-direction: column;
+}
+.timed-form > div.not-text label {
+  font-family: "Noto Kufi Arabic Bold", sans-serif;
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+.timed-form > div.not-text input {
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid #efefef;
+  font-size: 16px;
+  padding: 8px 10px;
+  font-family: inherit;
+}
+.timed-form > h3 {
+  text-align: center;
+  font-family: "Noto Kufi Arabic Bold", sans-serif;
+}
+.timed-form > div.time-pick {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.timed-form > div.time-pick > div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.timed-form > div.time-pick > div > label {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  text-align: center;
+}
+.timed-form > div.time-pick > div > input {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  border-radius: 0;
+  border: 1px solid #efefef;
+  font-size: 16px;
+  padding: 8px 10px;
+  font-family: inherit;
+  text-align: center;
+}
+.timed-form > div.time-pick > div:first-child {
+  padding-right: 10px;
+}
+.timed-form > div.time-pick > div:last-child {
+  padding-left: 10px;
+}
+.timed-form > button {
+  margin-top: 20px;
+  font-size: 16px;
+  font-size: 16px;
+  border: none;
+  padding: 5px 14px;
+  background-color: #38B9D1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timed-form > button i {
+  margin-left: 5px;
+  color: white;
+}
+
+/*تنسيقات صفحة اضافة مهمة ذات صورة*/
+.imaged-form {
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  height: 100vh;
+}
+.imaged-form > div {
+  display: flex;
+  flex-direction: column;
+}
+.imaged-form > div label {
+  font-family: "Noto Kufi Arabic Bold", sans-serif;
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+.imaged-form > div input {
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid #efefef;
+  font-size: 16px;
+  padding: 8px 10px;
+  font-family: inherit;
+}
+.imaged-form .img-upload {
+  margin-top: 10px;
+  font-size: 16px;
+  font-size: 16px;
+  border: none;
+  padding: 5px 14px;
+  background-color: #454561;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imaged-form .img-upload i {
+  margin-left: 5px;
+  color: white;
+}
+.imaged-form .url-image {
+  margin-top: 15px;
+}
+.imaged-form > button {
+  margin-top: 10px;
+  font-size: 16px;
+  font-size: 16px;
+  border: none;
+  padding: 5px 14px;
+  background-color: #38B9D1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imaged-form > button i {
+  margin-left: 5px;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

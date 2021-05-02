@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <title>إضافة مهمة جديدة</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+</head>
+
+<body>
+    <form class="imaged-form">
+        <div>
+            <label>أدخل المهمة الجديدة</label>
+            <input class="note" type="text" autofocus required>
+        </div>
+        <div>
+            <button class="img-upload">
+                <i class="far fa-images"></i>
+                أرفق الصورة
+            </button>
+        </div>
+        <div class="url-image">
+            <label>أو أدخل رابط الصورة</label>
+            <input class="url-image__input" type="url">
+        </div>
+        <button type="submit">
+            <i class="fas fa-plus"></i>
+            إضافة مهمة
+        </button>
+    </form>
+
+    <script>
+        require('../assets/js/imagedScript.js');
+    </script>
+</body>
+
+</html>

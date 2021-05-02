@@ -1,0 +1,39 @@
+/*التنسيقات العامة للتطبيق*/
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 16px;
+    font-family: "Noto Naskh Arabic", sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+ul{
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    list-style: none;
+}
+
+button{
+    outline: none;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    cursor: pointer;
+}
+
+input{
+    outline: none;
+    cursor: text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    font-weight: normal;
+}
