@@ -7,24 +7,6 @@
     flex-direction: column;
     padding: 15px;
     height: 100vh;
-    & > div.note-text {
-        display: flex;
-        flex-direction: column;
-        label {
-            font-family: "Noto Kufi Arabic Bold", sans-serif;
-            margin-bottom: 15px;
-            font-size: 20px;
-            text-align: center;
-        }
-        input {
-            width: 100%;
-            border-radius: 0;
-            border: 1px solid $secondary-color;
-            font-size: 16px;
-            padding: 8px 10px;
-            font-family: inherit;
-        }
-    }
 
     & > h3 {
         text-align: center;
@@ -72,6 +54,25 @@
         justify-content: center;
         i {
             margin-left: 5px;
+        }
+    }
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        label {
+            font-family: "Noto Kufi Arabic Bold", sans-serif;
+            margin-bottom: 15px;
+            font-size: 20px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            border-radius: 0;
+            border: 1px solid $secondary-color;
+            font-size: 16px;
+            padding: 8px 10px;
+            font-family: inherit;
         }
     }
 }
